@@ -1,2 +1,2 @@
 # myarch-calamares-confg
-Calamares config for myArch
+Calamares config for myArch.
