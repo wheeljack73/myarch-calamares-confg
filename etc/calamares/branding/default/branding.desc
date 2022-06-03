@@ -48,7 +48,7 @@ windowExpanding:    normal
 # This setting is ignored if "fullscreen" is selected for
 # *windowExpanding*, above. If not set, use constants defined
 # in CalamaresUtilsGui, 800x520.
-windowSize: 800px,520px
+windowSize: 1111px,676px
 
 # Placement of Calamares window. Either "center" or "free".
 # Whether "center" actually works does depend on the window
@@ -78,7 +78,7 @@ windowPlacement: center
 # to putting the sidebar on the left. Also valid is "qml,top".
 # While "widget,top" is valid, the widgets code is **not** flexible
 # and results will be terrible.
-sidebar: widget
+sidebar: qml,right
 
 # Kind of navigation (button panel on the bottom).
 #  - "widget" or unset, use traditional navigation
@@ -126,13 +126,13 @@ strings:
     version:             2022.5
     shortVersion:        2022.5
     versionedName:       myArch 2022.5
-#   shortVersionedName:  FancyGL 2020.2
+    shortVersionedName:  myArch
     bootloaderEntryName: myArch
-    productUrl:          https://calamares.io/
-#   supportUrl:          https://github.com/calamares/calamares/wiki
-#   knownIssuesUrl:      https://github.com/calamares/calamares/issues
-#   releaseNotesUrl:     https://calamares.io/news/
-#    donateUrl:           https://kde.org/community/donations/index.php
+#   productUrl:          https://calamares.io/
+#   supportUrl:          https://github.com/calamares/calamares/issues
+#   knownIssuesUrl:      https://calamares.io/about/
+#   releaseNotesUrl:     https://calamares.io/about/
+#   donateUrl:           https://kde.org/community/donations/index.php
 
 # These images are loaded from the branding module directory.
 #
@@ -162,10 +162,10 @@ strings:
 #
 # These filenames can also use substitutions from os-release (see above).
 images:
-    # productBanner:       "banner.png"
-    productIcon:         "squid.png"
-    productLogo:         "squid.png"
-    # productWallpaper:    "wallpaper.png"
+#   productBanner:       "banner.png"
+#   productIcon:         "squid.png"
+    productLogo:         "logo.png"
+#   productWallpaper:    "wallpaper.png"
     productWelcome:      "languages.png"
 
 # Colors for text and background components.
@@ -180,10 +180,10 @@ images:
 # branding component also ships a stylesheet.qss. Then they are
 # the corresponding CSS attributes of #sidebarApp.
 style:
-   sidebarBackground:    "#292F34"
+   sidebarBackground:    "#444"
    sidebarText:          "#FFFFFF"
-   sidebarTextSelect:    "#292F34"
-   sidebarTextHighlight: "#D35400"
+   sidebarTextSelect:    "#444"
+   sidebarTextHighlight: "#FFFFFF"
 
 ### SLIDESHOW
 #
