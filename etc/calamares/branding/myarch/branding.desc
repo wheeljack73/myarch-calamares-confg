@@ -80,19 +80,20 @@ strings:
     versionedName:       myArch 2022.6
     shortVersionedName:  myArch
     bootloaderEntryName: myArch
-#   productUrl:          https://calamares.io/
-#   supportUrl:          https://github.com/calamares/calamares/issues
+    productUrl:          https://calamares.io/
+    supportUrl:          https://github.com/calamares/calamares/issues
 #   knownIssuesUrl:      https://calamares.io/about/
-#   releaseNotesUrl:     https://calamares.io/about/
-#   donateUrl:           https://kde.org/community/donations/index.php
+    releaseNotesUrl:     https://calamares.io/about/
 
+# log feature
+
+uploadServer :
+    type :    "fiche"
+    url :     "http://termbin.com:9999"
+    sizeLimit : -1
+    
 # These images are loaded from the branding module directory.
 #
-# productBanner is an optional image, which if present, will be shown
-#       on the welcome page of the application, above the welcome text.
-#       It is intended to have a width much greater than height.
-#       It is displayed at 64px height (also on HiDPI).
-#       Recommended size is 64px tall, and up to 460px wide.
 # productIcon is used as the window icon, and will (usually) be used
 #       by the window manager to represent the application. This image
 #       should be square, and may be displayed by the window manager
@@ -100,12 +101,6 @@ strings:
 # productLogo is used as the logo at the top of the left-hand column
 #       which shows the steps to be taken. The image should be square,
 #       and is displayed at 80x80 pixels (also on HiDPI).
-# productWallpaper is an optional image, which if present, will replace
-#       the normal solid background on every page of the application.
-#       It can be any size and proportion,
-#       and will be tiled to fit the entire window.
-#       For a non-tiled wallpaper, the size should be the same as
-#       the overall window, see *windowSize* above (800x520).
 # productWelcome is shown on the welcome page of the application in
 #       the middle of the window, below the welcome text. It can be
 #       any size and proportion, and will be scaled to fit inside
@@ -114,10 +109,10 @@ strings:
 #
 # These filenames can also use substitutions from os-release (see above).
 images:
-    productIcon:         "logo.png"
     productLogo:         "logo.png"
+    productIcon:         "logo.png"
     productWelcome:      "Welcome.png"
-
+    
 # The slideshow is displayed during execution steps (e.g. when the
 # installer is actually writing to disk and doing other slow things).
 slideshow:               "show.qml"
@@ -132,8 +127,20 @@ slideshow:               "show.qml"
 #      the QML components).
 slideshowAPI: 2
 
-# These options are to customize online uploading of logs to pastebins:
-uploadServer :
-    type :    "fiche"
-    url :     "http://termbin.com:9999"
-    sizeLimit : -1
+
+# Colors for text and background components.
+#
+#  - sidebarBackground is the background of the sidebar
+#  - sidebarText is the (foreground) text color
+#  - sidebarTextHighlight sets the background of the selected (current) step.
+#    Optional, and defaults to the application palette.
+#  - sidebarSelect is the text color of the selected step.
+#
+# These colors can **also** be set through the stylesheet, if the
+# branding component also ships a stylesheet.qss. Then they are
+# the corresponding CSS attributes of #sidebarApp.
+style:
+   sidebarBackground:    "#000000"
+   sidebarText:          "#EFEFEF"
+   sidebarTextSelect:    "#000000"
+   sidebarTextHighlight: "#EFEFEF"

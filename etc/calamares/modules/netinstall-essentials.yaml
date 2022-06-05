@@ -1,11 +1,11 @@
-#- name: "XeroLinux Essentials"
-#  description: "Required, Immutable"
-#  critical: true
-#  hidden: false
-#  selected: true
-#  immutable: true
-#  packages:
-#    - xerolinux-tool
+- name: "XeroLinux Essentials"
+  description: "Required, Immutable"
+  critical: false
+  hidden: false
+  selected: false
+  immutable: false
+  packages:
+    - xerolinux-tool
 - name: "ArchLinux Kernel"
   description: "Always Gets Latest"
   critical: true
